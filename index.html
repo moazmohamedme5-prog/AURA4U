@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="AURA4U — premium streetwear for everyone.">
+<title>AURA4U — Wear Your Vibe</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="nav">
+  <a class="logo" href="#home">AURA<span>4</span>U</a>
+  <nav>
+    <a href="#home">Home</a><a href="#shop">Shop</a><a href="#new">New Drop</a>
+    <a href="#about">About Us</a><a href="#contact">Contact</a>
+  </nav>
+  <button class="cart-icon" onclick="toggleCart()">🛍 <span id="cartCount">0</span></button>
+</header>
+
+<main>
+<section id="home" class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-content">
+    <p class="eyebrow">NEW COLLECTION</p>
+    <h1>AURA<span>4</span>U</h1>
+    <p class="tagline">WEAR YOUR VIBE</p>
+    <p class="hero-copy">Premium streetwear for everyone.<br>Designed for comfort. Made for your story.</p>
+    <a class="btn" href="#shop">SHOP NOW →</a>
+  </div>
+</section>
+
+<section class="benefits">
+  <div><b>🚚 Free Shipping</b><small>On orders over 20 OMR</small></div>
+  <div><b>↩ Easy Returns</b><small>Within 7 days</small></div>
+  <div><b>◉ Secure Checkout</b><small>Safe & simple</small></div>
+  <div><b>✦ Premium Quality</b><small>Made to last</small></div>
+</section>
+
+<section class="categories">
+  <a href="#shop" onclick="setFilter('Hoodies')"><span>HOODIES</span></a>
+  <a href="#shop" onclick="setFilter('T-Shirts')"><span>T-SHIRTS</span></a>
+  <a href="#shop" onclick="setFilter('Pants')"><span>PANTS</span></a>
+  <a href="#shop" onclick="setFilter('Sets')"><span>SETS</span></a>
+  <a href="#shop" onclick="setFilter('Accessories')"><span>ACCESSORIES</span></a>
+</section>
+
+<section id="shop" class="shop-section">
+  <div class="section-head">
+    <div><p class="eyebrow">EXPLORE</p><h2>SHOP</h2></div>
+    <input id="search" type="search" placeholder="Search AURA4U..." oninput="filterProducts()">
+  </div>
+  <div class="filters">
+    <button class="filter active" onclick="setFilter('All')">All</button>
+    <button class="filter" onclick="setFilter('Hoodies')">Hoodies</button>
+    <button class="filter" onclick="setFilter('T-Shirts')">T-Shirts</button>
+    <button class="filter" onclick="setFilter('Pants')">Pants</button>
+    <button class="filter" onclick="setFilter('Sets')">Sets</button>
+    <button class="filter" onclick="setFilter('Accessories')">Accessories</button>
+  </div>
+  <div id="productGrid" class="product-grid"><article class="product-card" data-category="Hoodies" data-name="aura oversized hoodie">
+      <div class="product-img"><img src="assets/hero.png" alt="Aura Oversized Hoodie"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Oversized Hoodie</h3><p>Hoodies</p><strong>18 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Oversized Hoodie','18 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="T-Shirts" data-name="aura essential t-shirt">
+      <div class="product-img"><img src="assets/shop.png" alt="Aura Essential T-Shirt"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Essential T-Shirt</h3><p>T-Shirts</p><strong>9 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Essential T-Shirt','9 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="Pants" data-name="aura cargo pants">
+      <div class="product-img"><img src="assets/shop.png" alt="Aura Cargo Pants"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Cargo Pants</h3><p>Pants</p><strong>15 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Cargo Pants','15 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="Hoodies" data-name="aura 2-piece hoodie">
+      <div class="product-img"><img src="assets/product.png" alt="Aura 2-Piece Hoodie"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura 2-Piece Hoodie</h3><p>Hoodies</p><strong>20 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura 2-Piece Hoodie','20 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="Sets" data-name="aura tracksuit set">
+      <div class="product-img"><img src="assets/about.png" alt="Aura Tracksuit Set"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Tracksuit Set</h3><p>Sets</p><strong>25 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Tracksuit Set','25 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="Hoodies" data-name="aura cropped hoodie">
+      <div class="product-img"><img src="assets/product.png" alt="Aura Cropped Hoodie"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Cropped Hoodie</h3><p>Hoodies</p><strong>16 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Cropped Hoodie','16 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="Pants" data-name="aura wide leg pants">
+      <div class="product-img"><img src="assets/about.png" alt="Aura Wide Leg Pants"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Wide Leg Pants</h3><p>Pants</p><strong>15 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Wide Leg Pants','15 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="T-Shirts" data-name="aura knit sweater">
+      <div class="product-img"><img src="assets/shop.png" alt="Aura Knit Sweater"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Knit Sweater</h3><p>T-Shirts</p><strong>18 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Knit Sweater','18 OMR')">ADD TO CART</button>
+      </div>
+    </article>
+<article class="product-card" data-category="Accessories" data-name="aura cap">
+      <div class="product-img"><img src="assets/about.png" alt="Aura Cap"><span class="new">NEW</span></div>
+      <div class="product-info">
+        <h3>Aura Cap</h3><p>Accessories</p><strong>7 OMR</strong>
+        <button class="add-btn" onclick="addToCart('Aura Cap','7 OMR')">ADD TO CART</button>
+      </div>
+    </article></div>
+</section>
+
+<section id="new" class="statement">
+  <div><p class="eyebrow">AURA4U</p><h2>MORE THAN<br>JUST CLOTHES.</h2><p>Different styles. Same vibe. Find your everyday fit.</p></div>
+</section>
+
+<section id="about" class="about">
+  <div><p class="eyebrow">ABOUT US</p><h2>WEAR YOUR VIBE.</h2>
+  <p>AURA4U is a modern clothing brand made for people who want comfort, confidence and their own style — girls, boys and everyone in between.</p>
+  <p>From everyday basics to statement pieces, every drop is designed to fit your vibe.</p></div>
+</section>
+
+<section id="contact" class="contact">
+  <div><p class="eyebrow">GET IN TOUCH</p><h2>CONTACT US</h2>
+  <p>Have a question about an order or a new drop? Send us a message.</p>
+  <form onsubmit="event.preventDefault(); alert('Thanks! Your message is ready to send.');">
+    <input required placeholder="Your name"><input required type="email" placeholder="Your email">
+    <textarea required placeholder="Your message"></textarea><button class="btn" type="submit">SEND MESSAGE</button>
+  </form></div>
+</section>
+</main>
+
+<aside id="cart" class="cart">
+  <button class="close" onclick="toggleCart()">×</button><h2>Your Cart</h2>
+  <div id="cartItems"><p class="muted">Your cart is empty.</p></div>
+  <div class="cart-total"><span>Total</span><strong id="cartTotal">0 OMR</strong></div>
+  <button class="btn full" onclick="checkout()">CHECKOUT</button>
+</aside>
+<div id="overlay" class="overlay" onclick="toggleCart()"></div>
+
+<footer>
+  <div class="logo">AURA<span>4</span>U</div><p>WEAR YOUR VIBE.</p>
+  <div class="footer-links"><a href="#shop">Shop</a><a href="#new">New Drop</a><a href="#about">About</a><a href="#contact">Contact</a></div>
+  <small>© 2026 AURA4U. All rights reserved.</small>
+</footer>
+<script src="script.js"></script>
+</body>
+</html>
