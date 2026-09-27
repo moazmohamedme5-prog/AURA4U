@@ -9,7 +9,7 @@
 </head>
 <body>
 <header class="nav">
-  <a class="logo" href="#home">AURA<span>4</span>U</a>
+  <a class="logo" href="#home"><img src="assets/aura-logo.jpg" alt="AURA4U logo"></a>
   <nav>
     <a href="#home">Home</a><a href="#shop">Shop</a><a href="#new">New Drop</a>
     <a href="#about">About Us</a><a href="#contact">Contact</a>
@@ -57,69 +57,48 @@
     <button class="filter" onclick="setFilter('Sets')">Sets</button>
     <button class="filter" onclick="setFilter('Accessories')">Accessories</button>
   </div>
-  <div id="productGrid" class="product-grid"><article class="product-card" data-category="Hoodies" data-name="aura oversized hoodie">
-      <div class="product-img"><img src="assets/hero.png" alt="Aura Oversized Hoodie"><span class="new">NEW</span></div>
+  <div id="productGrid" class="product-grid">
+    <article class="product-card" data-category="Hoodies" data-name="aura4u zip hoodie">
+      <div class="product-img"><img src="assets/aura-zip-hoodie.jpg" alt="AURA4U Zip Hoodie"><span class="new">NEW DROP</span></div>
       <div class="product-info">
-        <h3>Aura Oversized Hoodie</h3><p>Hoodies</p><strong>18 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Oversized Hoodie','18 OMR')">ADD TO CART</button>
+        <h3>AURA4U Zip Hoodie</h3><p>Hoodies • Grey / Burgundy</p><strong>10 OMR</strong>
+        <div class="variant-row">
+          <label>Colour<select id="color-hoodie"><option>Grey</option><option>Burgundy</option></select></label>
+          <label>Size<select id="size-hoodie"><option>S</option><option>M</option></select></label>
+        </div>
+        <button class="add-btn" onclick="addProductToCart('AURA4U Zip Hoodie',10,'hoodie')">ADD TO CART</button>
+        <small class="stock" id="stock-hoodie">10 pieces available</small>
       </div>
     </article>
-<article class="product-card" data-category="T-Shirts" data-name="aura essential t-shirt">
-      <div class="product-img"><img src="assets/shop.png" alt="Aura Essential T-Shirt"><span class="new">NEW</span></div>
+
+    <article class="product-card" data-category="Pants" data-name="aura4u sweatpants">
+      <div class="product-img"><img src="assets/aura-sweatpants.jpg" alt="AURA4U Sweatpants"><span class="new">NEW DROP</span></div>
       <div class="product-info">
-        <h3>Aura Essential T-Shirt</h3><p>T-Shirts</p><strong>9 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Essential T-Shirt','9 OMR')">ADD TO CART</button>
+        <h3>AURA4U Sweatpants</h3><p>Pants • Grey / Burgundy</p><strong>10 OMR</strong>
+        <div class="variant-row">
+          <label>Colour<select id="color-pants"><option>Grey</option><option>Burgundy</option></select></label>
+          <label>Size<select id="size-pants"><option>S</option><option>M</option></select></label>
+        </div>
+        <button class="add-btn" onclick="addProductToCart('AURA4U Sweatpants',10,'pants')">ADD TO CART</button>
+        <small class="stock" id="stock-pants">10 pieces available</small>
       </div>
     </article>
-<article class="product-card" data-category="Pants" data-name="aura cargo pants">
-      <div class="product-img"><img src="assets/shop.png" alt="Aura Cargo Pants"><span class="new">NEW</span></div>
-      <div class="product-info">
-        <h3>Aura Cargo Pants</h3><p>Pants</p><strong>15 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Cargo Pants','15 OMR')">ADD TO CART</button>
-      </div>
+
+    <article class="product-card" data-category="T-Shirts" data-name="aura4u striped oversized top">
+      <div class="product-img"><img src="assets/aura-striped-top.jpg" alt="AURA4U Striped Oversized Top"><span class="new">COMING SOON</span></div>
+      <div class="product-info"><h3>AURA4U Striped Oversized Top</h3><p>T-Shirts • Navy / Burgundy</p><strong>Coming Soon</strong></div>
     </article>
-<article class="product-card" data-category="Hoodies" data-name="aura 2-piece hoodie">
-      <div class="product-img"><img src="assets/product.png" alt="Aura 2-Piece Hoodie"><span class="new">NEW</span></div>
-      <div class="product-info">
-        <h3>Aura 2-Piece Hoodie</h3><p>Hoodies</p><strong>20 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura 2-Piece Hoodie','20 OMR')">ADD TO CART</button>
-      </div>
+
+    <article class="product-card" data-category="Hoodies" data-name="aura4u angel wings hoodie">
+      <div class="product-img"><img src="assets/aura-wings-hoodie.jpg" alt="AURA4U Angel Wings Hoodie"><span class="new">COMING SOON</span></div>
+      <div class="product-info"><h3>AURA4U Angel Wings Hoodie</h3><p>Hoodies • White / Silver</p><strong>Coming Soon</strong></div>
     </article>
-<article class="product-card" data-category="Sets" data-name="aura tracksuit set">
-      <div class="product-img"><img src="assets/about.png" alt="Aura Tracksuit Set"><span class="new">NEW</span></div>
-      <div class="product-info">
-        <h3>Aura Tracksuit Set</h3><p>Sets</p><strong>25 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Tracksuit Set','25 OMR')">ADD TO CART</button>
-      </div>
+
+    <article class="product-card" data-category="Sets" data-name="aura4u hoodie pants set">
+      <div class="product-img"><img src="assets/aura-set.jpg" alt="AURA4U Hoodie and Pants Set"><span class="new">COMING SOON</span></div>
+      <div class="product-info"><h3>AURA4U Hoodie &amp; Pants Set</h3><p>Sets • Grey / Burgundy</p><strong>Coming Soon</strong></div>
     </article>
-<article class="product-card" data-category="Hoodies" data-name="aura cropped hoodie">
-      <div class="product-img"><img src="assets/product.png" alt="Aura Cropped Hoodie"><span class="new">NEW</span></div>
-      <div class="product-info">
-        <h3>Aura Cropped Hoodie</h3><p>Hoodies</p><strong>16 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Cropped Hoodie','16 OMR')">ADD TO CART</button>
-      </div>
-    </article>
-<article class="product-card" data-category="Pants" data-name="aura wide leg pants">
-      <div class="product-img"><img src="assets/about.png" alt="Aura Wide Leg Pants"><span class="new">NEW</span></div>
-      <div class="product-info">
-        <h3>Aura Wide Leg Pants</h3><p>Pants</p><strong>15 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Wide Leg Pants','15 OMR')">ADD TO CART</button>
-      </div>
-    </article>
-<article class="product-card" data-category="T-Shirts" data-name="aura knit sweater">
-      <div class="product-img"><img src="assets/shop.png" alt="Aura Knit Sweater"><span class="new">NEW</span></div>
-      <div class="product-info">
-        <h3>Aura Knit Sweater</h3><p>T-Shirts</p><strong>18 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Knit Sweater','18 OMR')">ADD TO CART</button>
-      </div>
-    </article>
-<article class="product-card" data-category="Accessories" data-name="aura cap">
-      <div class="product-img"><img src="assets/about.png" alt="Aura Cap"><span class="new">NEW</span></div>
-      <div class="product-info">
-        <h3>Aura Cap</h3><p>Accessories</p><strong>7 OMR</strong>
-        <button class="add-btn" onclick="addToCart('Aura Cap','7 OMR')">ADD TO CART</button>
-      </div>
-    </article></div>
+  </div>
 </section>
 
 <section id="new" class="statement">
@@ -151,7 +130,7 @@
 <div id="overlay" class="overlay" onclick="toggleCart()"></div>
 
 <footer>
-  <div class="logo">AURA<span>4</span>U</div><p>WEAR YOUR VIBE.</p>
+  <div class="logo"><img src="assets/aura-logo.jpg" alt="AURA4U logo"></div><p>WEAR YOUR VIBE.</p>
   <div class="footer-links"><a href="#shop">Shop</a><a href="#new">New Drop</a><a href="#about">About</a><a href="#contact">Contact</a></div>
   <small>© 2026 AURA4U. All rights reserved.</small>
 </footer>
